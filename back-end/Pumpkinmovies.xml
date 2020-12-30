@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pumpkinmovies</name>
+    </assembly>
+    <members>
+        <member name="M:Pumpkinmovies.Controllers.MovieController.MovieDetail(System.String)">
+            <summary>
+            获取电影详情页信息
+            </summary>
+            <param name="MovieID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pumpkinmovies.Controllers.MovieController.SearchName(System.String)">
+            <summary>
+            通过电影名字模糊搜索
+            </summary>
+            <param name="MovieName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pumpkinmovies.Controllers.MovieController.TagRank(System.String)">
+            <summary>
+            获取一个Tag的电影，按评分降序排列
+            </summary>
+            <param name="TagName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

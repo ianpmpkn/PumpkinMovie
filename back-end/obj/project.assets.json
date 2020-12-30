@@ -9247,11 +9247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AERO\\source\\Pumpkinmovies\\Pumpkinmovies.csproj",
+      "projectUniqueName": "C:\\Source\\PumpkinMovie\\back-end\\Pumpkinmovies.csproj",
       "projectName": "Pumpkinmovies",
-      "projectPath": "C:\\Users\\AERO\\source\\Pumpkinmovies\\Pumpkinmovies.csproj",
+      "projectPath": "C:\\Source\\PumpkinMovie\\back-end\\Pumpkinmovies.csproj",
       "packagesPath": "C:\\Users\\AERO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AERO\\source\\Pumpkinmovies\\obj\\",
+      "outputPath": "C:\\Source\\PumpkinMovie\\back-end\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AERO\\AppData\\Roaming\\NuGet\\NuGet.Config",

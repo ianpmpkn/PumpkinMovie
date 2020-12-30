@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+vuIWs4u+e9HIti8lEEYsWk+/20j0OBwFC0cunbEnixuPOAk9g35yUUwW3Ac2ETgDva+Ap7IvsPEbYFZEXcKfQ==",
+  "dgSpecHash": "S1kDmw6UsYjTy01aJWMwSEuq9SqUPTG4pTREf8ivZJJJRHm/y8S5nuXtm5hwKJONAB5S6hBAXHIHRWVLdm7irg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AERO\\source\\Pumpkinmovies\\Pumpkinmovies.csproj",
+  "projectFilePath": "C:\\Source\\PumpkinMovie\\back-end\\Pumpkinmovies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AERO\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\AERO\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

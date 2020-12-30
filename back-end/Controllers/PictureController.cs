@@ -82,9 +82,5 @@ namespace Pumpkinmovies.Controllers
                 msg = "Person Picture Added"
             });
         }
-
-        [Route("AddMoviePicture")]
-        [HttpPost]
-
     }
 }

@@ -316,6 +316,36 @@ namespace Pumpkinmovies.Services
             return returnList;
         }
 
+        //通过人物获得电影，保证不重复
+        public List<MovieBrief> GetMovieByPerson(string PersonID)
+        {
+            var returnList = new List<MovieBrief> { };
+            var movieIDList = new List<string> { };
+
+            var starList = context.Star.ToLookup(s => s.person_id)[PersonID].ToList();
+            var directorList = context.Director.ToLookup(d => d.person_id)[PersonID].ToList();
+
+            foreach (var temp in starList)
+            {
+                movieIDList.Add(temp.m_id);
+            }
+
+            foreach (var temp in directorList)
+            {
+                movieIDList.Add(temp.m_id);
+            }
+
+            //保证movieID不重复
+            movieIDList = movieIDList.Distinct().ToList();
+
+            foreach (var temp in movieIDList)
+            {
+                returnList.Add(GetMovieBrief(temp));
+            }
+
+            return returnList;
+        }
+
         //获得所有电影，按评分降序排列
         public List<MovieBrief> GetAllMovie()
         {

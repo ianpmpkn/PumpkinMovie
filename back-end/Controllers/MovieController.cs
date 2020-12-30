@@ -79,6 +79,23 @@ namespace Pumpkinmovies.Controllers
             });
         }
 
+        /// <summary>
+        /// 获取一个人物参与的电影，不重复
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <returns></returns>
+        [Route("PersonRank")]
+        [HttpGet]
+        public IActionResult PersonRank(string PersonID)
+        {
+            return Ok(new
+            {
+                Success = true,
+                TagList = service.GetMovieByPerson(PersonID),
+                msg = "Operation Done"
+            });
+        }
+
         [Route("Special")]
         [HttpGet]
         public IActionResult Special(string UserID)

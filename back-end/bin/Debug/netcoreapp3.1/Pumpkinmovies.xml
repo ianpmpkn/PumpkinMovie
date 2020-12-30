@@ -25,5 +25,12 @@
             <param name="TagName"></param>
             <returns></returns>
         </member>
+        <member name="M:Pumpkinmovies.Controllers.MovieController.PersonRank(System.String)">
+            <summary>
+            获取一个人物参与的电影，不重复
+            </summary>
+            <param name="PersonID"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

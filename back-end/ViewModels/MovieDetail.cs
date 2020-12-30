@@ -41,8 +41,6 @@ namespace Pumpkinmovies.ViewModels
     {
         public string PictureID { get; set; }
         public string PicturePath { get; set; }
-        public int PictureWidth { get; set; }
-        public int PictureHeight { get; set; }
         public string PictureInfo { get; set; }
     }
     public class ViewRating

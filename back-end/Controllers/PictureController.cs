@@ -24,20 +24,26 @@ namespace Pumpkinmovies.Controllers
         public IActionResult AddMoviePicture([FromBody]NewMoviePicture newMoviePicture)
         {
             //新建图片信息
-            var picture = new Picture {
-                pic_id = (service.GetPictureNum() + 1).ToString(),
-                pic_path = newMoviePicture.PicturePath,
-                pic_info = newMoviePicture.PictureInfo
-            };
-            context.Picture.Attach(picture);
+            var picture = new Picture { };
+            picture.pic_id = (service.GetPictureNum() + 1).ToString();
+            picture.pic_path = newMoviePicture.PicturePath;
+            picture.pic_info = newMoviePicture.PictureInfo;
+
+            context.Picture.Add(picture);
             context.SaveChanges();
 
             //新建联系集
-            var moviePicture = new MoviePicture {
-                m_id = newMoviePicture.MovieID,
-                pic_id = picture.pic_id
-            };
-            context.MoviePicture.Attach(moviePicture);
+            var moviePicture = new MoviePicture { };
+            moviePicture.m_id = newMoviePicture.MovieID;
+            moviePicture.pic_id = picture.pic_id;
+
+            context.MoviePicture.Add(moviePicture);
+            context.SaveChanges();
+
+            //全局信息
+            var totalinfo = context.TotalInfo.Find("pumpkinmovies");
+            totalinfo.pic_num += 1;
+            context.TotalInfo.Attach(totalinfo);
             context.SaveChanges();
 
             return Ok(new
@@ -55,22 +61,26 @@ namespace Pumpkinmovies.Controllers
         public IActionResult AddPersonPicture([FromBody] NewPersonPicture newPersonPicture)
         {
             //新建图片信息
-            var picture = new Picture
-            {
-                pic_id = (service.GetPictureNum() + 1).ToString(),
-                pic_path = newPersonPicture.PicturePath,
-                pic_info = newPersonPicture.PictureInfo
-            };
-            context.Picture.Attach(picture);
+            var picture = new Picture { };
+            picture.pic_id = (service.GetPictureNum() + 1).ToString();
+            picture.pic_path = newPersonPicture.PicturePath;
+            picture.pic_info = newPersonPicture.PictureInfo;
+
+            context.Picture.Add(picture);
             context.SaveChanges();
 
             //新建联系集
-            var personPicture = new PersonPicture
-            {
-                person_id = newPersonPicture.PersonID,
-                pic_id = picture.pic_id
-            };
-            context.PersonPicture.Attach(personPicture);
+            var personPicture = new PersonPicture{ };
+            personPicture.person_id = newPersonPicture.PersonID;
+            personPicture.pic_id = picture.pic_id;
+
+            context.PersonPicture.Add(personPicture);
+            context.SaveChanges();
+
+            //全局信息
+            var totalinfo = context.TotalInfo.Find("pumpkinmovies");
+            totalinfo.pic_num += 1;
+            context.TotalInfo.Attach(totalinfo);
             context.SaveChanges();
 
             return Ok(new

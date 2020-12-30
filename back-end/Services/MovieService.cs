@@ -183,8 +183,6 @@ namespace Pumpkinmovies.Services
                 {
                     PictureID = temppicture.pic_id,
                     PicturePath = temppicture.pic_path,
-                    PictureHeight = temppicture.pic_height,
-                    PictureWidth = temppicture.pic_width,
                     PictureInfo = temppicture.pic_info
                 };
                 returnList.Add(add);

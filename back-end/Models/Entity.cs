@@ -43,8 +43,6 @@ namespace Pumpkinmovies.Models
         [Key]
         public string pic_id { get; set; }
         public string pic_path { get; set; }
-        public int pic_width { get; set; }
-        public int pic_height { get; set; }
         public string pic_info { get; set; }
     }
 

@@ -46,7 +46,7 @@ namespace Pumpkinmovies.Controllers
                     Success = true,
                     UserID = user.u_id,
                     UserName = user.u_name,
-                    msg = "Success"
+                    msg = "User Created"
                 });
             }
             else
@@ -73,7 +73,7 @@ namespace Pumpkinmovies.Controllers
                     Success = true,
                     UserID = user.u_id,
                     UserName = user.u_name,
-                    msg = "Success"
+                    msg = "Login"
                 });
             }
             else

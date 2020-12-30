@@ -128,8 +128,8 @@ namespace Pumpkinmovies.Controllers
 
                 return Ok(new
                 {
-                    MovieID = movie.m_id,
                     Success = true,
+                    MovieID = movie.m_id,
                     msg = "Movie Added"
                 });
             }
